@@ -4,7 +4,9 @@ import Home from '../views/Home.vue'
 import Login from '../views/Login.vue'
 import Logout from '../views/Logout.vue'
 import Register from '../views/Register.vue'
+import UserProfile from '../views/UserProfile'
 import store from '../store/index'
+
 
 Vue.use(Router)
 
@@ -52,7 +54,15 @@ const router = new Router({
       meta: {
         requiresAuth: false
       }
-    }
+    },
+    {
+      path: "/profile",
+      name: "user-profile",
+      component: UserProfile,
+      meta: {
+        requiresAuth: true
+      }
+    },
   ]
 })
 
