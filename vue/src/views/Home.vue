@@ -1,16 +1,18 @@
 <template>
   <div class="home">
-    <h1>Home</h1>
+    <nav-bar />
     <search />
   </div>
 </template>
 
 <script>
 import Search from '../components/Search.vue';
+import NavBar from '../components/NavBar.vue';
 export default {
   name: "home",
   components: {
-    Search
+    Search,
+    NavBar
   }
 };
 </script>
