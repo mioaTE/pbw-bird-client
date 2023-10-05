@@ -1,6 +1,7 @@
 <template>
   <div>
     <h2>Welcome,  {{ user.username }}</h2>
+    <h2>User ID: {{ user.id }}</h2>
     <button type="editButton" v-on:click="updateEditProfile">Edit Profile</button>
 
     <section id="profile" v-show="this.editProfile == false">
@@ -65,7 +66,7 @@ export default {
     BirdService.getProfile().then(response => {
     this.profile = response.data;
     
-    this.formData.profileId = this.profile.id;
+    this.formData.profileId = this.profile.profileId;
     this.formData.username = this.profile.username;
     this.formData.favoriteBird = this.profile.favoriteBird;
     this.formData.mostCommonBird = this.profile.mostCommonBird;

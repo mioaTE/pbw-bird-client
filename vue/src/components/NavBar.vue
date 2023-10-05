@@ -17,7 +17,9 @@
         <!-- <router-link v-bind:to="{ name: 'logout' }" >
           Logout |
         </router-link> -->
-
+        <router-link class="btn button" id="navbutton" v-bind:to="{ name: 'list' }">
+            List |
+            </router-link>
         
             <router-link class="btn button" id="navbutton" v-bind:to="{ name: 'profile' }">
             Profile

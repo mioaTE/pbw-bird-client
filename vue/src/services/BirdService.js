@@ -20,5 +20,13 @@ export default {
 
     editProfile(formData){
         return axios.put(`/editProfile`, formData);
+    },
+
+    createList(newList){
+        return axios.post(`/createList`, newList);
+    },
+    
+    deleteList(listId){
+        return axios.delete(`/deleteList/${listId}`);
     }
 }
